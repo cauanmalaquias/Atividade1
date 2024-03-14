@@ -52,7 +52,7 @@ int main() {
         printf("3. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
-        getchar(); 
+        getchar();
 
         switch (opcao) {
             case 1: {
@@ -60,10 +60,10 @@ int main() {
                     struct Cliente novoCliente;
                     printf("\nNome: ");
                     fgets(novoCliente.nome, sizeof(novoCliente.nome), stdin);
-                    novoCliente.nome[strcspn(novoCliente.nome, "\n")] = 0; 
+                    novoCliente.nome[strcspn(novoCliente.nome, "\n")] = 0;
                     printf("Data de Nascimento (DD MM AAAA): ");
                     scanf("%d %d %d", &novoCliente.dataNascimento.dia, &novoCliente.dataNascimento.mes, &novoCliente.dataNascimento.ano);
-                    getchar(); 
+                    getchar();
                     printf("Sexo (M/F): ");
                     scanf(" %c", &novoCliente.sexo);
                     novoCliente.idade = calcularIdade(novoCliente.dataNascimento, dataAtual);
